@@ -8,12 +8,25 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
 import { Character } from '../types/Character';
+import { RootStackParamList } from '../types/navigation';
 import { CharacterStorage } from '../utils/storage';
 
+type AddCharacterScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'AddCharacter'
+>;
+
+type AddCharacterScreenRouteProp = RouteProp<
+  RootStackParamList,
+  'AddCharacter'
+>;
+
 interface AddCharacterScreenProps {
-  navigation: any;
-  route: any;
+  navigation: AddCharacterScreenNavigationProp;
+  route: AddCharacterScreenRouteProp;
 }
 
 const AddCharacterScreen: React.FC<AddCharacterScreenProps> = ({ navigation, route }) => {

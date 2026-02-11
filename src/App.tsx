@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamList } from './types/navigation';
 import CharacterListScreen from './screens/CharacterListScreen';
 import CharacterDetailScreen from './screens/CharacterDetailScreen';
 import AddCharacterScreen from './screens/AddCharacterScreen';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
@@ -33,7 +34,7 @@ const App = () => {
         <Stack.Screen
           name="CharacterDetail"
           component={CharacterDetailScreen}
-          options={({ route }: any) => ({
+          options={({ route }) => ({
             title: route.params?.character?.name || 'Personaje',
           })}
         />

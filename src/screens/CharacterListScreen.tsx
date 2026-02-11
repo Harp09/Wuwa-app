@@ -7,12 +7,19 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { Character } from '../types/Character';
+import { RootStackParamList } from '../types/navigation';
 import { CharacterStorage } from '../utils/storage';
 import { initialCharacters } from '../data/initialCharacters';
 
+type CharacterListScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'CharacterList'
+>;
+
 interface CharacterListScreenProps {
-  navigation: any;
+  navigation: CharacterListScreenNavigationProp;
 }
 
 const CharacterListScreen: React.FC<CharacterListScreenProps> = ({ navigation }) => {

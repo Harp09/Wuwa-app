@@ -6,17 +6,30 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
 import { Character } from '../types/Character';
+import { RootStackParamList } from '../types/navigation';
+
+type CharacterDetailScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'CharacterDetail'
+>;
+
+type CharacterDetailScreenRouteProp = RouteProp<
+  RootStackParamList,
+  'CharacterDetail'
+>;
 
 interface CharacterDetailScreenProps {
-  route: any;
-  navigation: any;
+  route: CharacterDetailScreenRouteProp;
+  navigation: CharacterDetailScreenNavigationProp;
 }
 
 type TabType = 'builds' | 'weapons' | 'echoes' | 'constellations' | 'wallpapers';
 
 const CharacterDetailScreen: React.FC<CharacterDetailScreenProps> = ({ route, navigation }) => {
-  const { character } = route.params as { character: Character };
+  const { character } = route.params;
   const [activeTab, setActiveTab] = useState<TabType>('builds');
 
   const getElementColor = (element: string) => {
