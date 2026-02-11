@@ -1,0 +1,178 @@
+import { Character } from '../types/Character';
+
+export const initialCharacters: Character[] = [
+  {
+    id: '1',
+    name: 'Rover (Spectro)',
+    element: 'Spectro',
+    weapon: 'Sword',
+    rarity: 5,
+    description: 'El protagonista principal, un Resonador con la habilidad de cambiar entre diferentes elementos.',
+    avatar: '',
+    wallpapers: [],
+    builds: [
+      {
+        id: 'build1',
+        name: 'DPS Principal',
+        description: 'Build enfocado en maximizar el daño de Spectro',
+        recommendedWeapons: ['Emerald of Genesis', 'Sword of Night'],
+        recommendedEchoes: ['Impermanence Heron', 'Mourning Aix'],
+        mainStats: [
+          { slot: 'Cost 4', stat: 'Crit Rate / Crit DMG' },
+          { slot: 'Cost 3', stat: 'Energy Regen / Spectro DMG%' },
+          { slot: 'Cost 3', stat: 'Spectro DMG%' },
+          { slot: 'Cost 1', stat: 'ATK%' },
+          { slot: 'Cost 1', stat: 'ATK%' },
+        ],
+        subStats: ['Crit Rate', 'Crit DMG', 'ATK%', 'Energy Regen'],
+      },
+    ],
+    weapons: [
+      {
+        id: 'weapon1',
+        name: 'Emerald of Genesis',
+        type: 'Sword',
+        rarity: 5,
+        description: 'Espada legendaria con gran poder',
+        baseAttack: 587,
+        subStat: 'Crit Rate',
+        subStatValue: 25.1,
+      },
+    ],
+    echoes: [
+      {
+        id: 'echo1',
+        name: 'Impermanence Heron',
+        rarity: 5,
+        cost: 4,
+        skill: 'Transform into Impermanence Heron to deal Spectro DMG',
+        sonataEffect: 'Celestial Light',
+      },
+    ],
+    constellations: [
+      {
+        id: 'const1',
+        level: 1,
+        name: 'Primera Secuencia',
+        description: 'Aumenta el daño de la habilidad básica',
+      },
+      {
+        id: 'const2',
+        level: 2,
+        name: 'Segunda Secuencia',
+        description: 'Reduce el tiempo de recarga de habilidades',
+      },
+      {
+        id: 'const3',
+        level: 3,
+        name: 'Tercera Secuencia',
+        description: 'Aumenta el nivel de la habilidad definitiva',
+      },
+      {
+        id: 'const4',
+        level: 4,
+        name: 'Cuarta Secuencia',
+        description: 'Aumenta el ATK después de usar habilidad',
+      },
+      {
+        id: 'const5',
+        level: 5,
+        name: 'Quinta Secuencia',
+        description: 'Aumenta el nivel de todas las habilidades',
+      },
+      {
+        id: 'const6',
+        level: 6,
+        name: 'Sexta Secuencia',
+        description: 'Desbloquea el máximo potencial del personaje',
+      },
+    ],
+  },
+  {
+    id: '2',
+    name: 'Jiyan',
+    element: 'Aero',
+    weapon: 'Broadblade',
+    rarity: 5,
+    description: 'General de la Midnight Rangers, experto en combate aéreo con habilidades de viento.',
+    avatar: '',
+    wallpapers: [],
+    builds: [
+      {
+        id: 'build2',
+        name: 'DPS Aéreo',
+        description: 'Maximiza el daño Aero y los ataques aéreos',
+        recommendedWeapons: ['Verdant Summit', 'Autumntrace'],
+        recommendedEchoes: ['Feilian Beringal'],
+        mainStats: [
+          { slot: 'Cost 4', stat: 'Crit Rate / Crit DMG' },
+          { slot: 'Cost 3', stat: 'Aero DMG%' },
+          { slot: 'Cost 3', stat: 'Aero DMG%' },
+          { slot: 'Cost 1', stat: 'ATK%' },
+          { slot: 'Cost 1', stat: 'ATK%' },
+        ],
+        subStats: ['Crit Rate', 'Crit DMG', 'ATK%', 'Heavy Attack DMG'],
+      },
+    ],
+    weapons: [
+      {
+        id: 'weapon2',
+        name: 'Verdant Summit',
+        type: 'Broadblade',
+        rarity: 5,
+        description: 'Arma signature de Jiyan',
+        baseAttack: 587,
+        subStat: 'Crit Rate',
+        subStatValue: 25.1,
+      },
+    ],
+    echoes: [
+      {
+        id: 'echo2',
+        name: 'Feilian Beringal',
+        rarity: 5,
+        cost: 4,
+        skill: 'Transform into Feilian Beringal to deal Aero DMG',
+        sonataEffect: 'Sierra Gale',
+      },
+    ],
+    constellations: [
+      {
+        id: 'const7',
+        level: 1,
+        name: 'Benevolence',
+        description: 'Aumenta daño de Resonance Skill',
+      },
+      {
+        id: 'const8',
+        level: 2,
+        name: 'Versatility',
+        description: 'Recuperación de energía mejorada',
+      },
+      {
+        id: 'const9',
+        level: 3,
+        name: 'Skillfulness',
+        description: 'Aumenta nivel de Resonance Liberation',
+      },
+      {
+        id: 'const10',
+        level: 4,
+        name: 'Prudence',
+        description: 'Aumenta daño de Heavy Attack',
+      },
+      {
+        id: 'const11',
+        level: 5,
+        name: 'Fortitude',
+        description: 'Aumenta nivel de Forte Circuit',
+      },
+      {
+        id: 'const12',
+        level: 6,
+        name: 'Resolution',
+        description: 'Aumenta daño crítico sustancialmente',
+      },
+    ],
+  },
+];
