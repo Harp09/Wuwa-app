@@ -1,4 +1,4 @@
-# Wuwa-app - Aplicación Móvil de Wuthering Waves
+# Wuwa-app - Aplicación Móvil de Wuthering Waves (Hello)
 
 Una aplicación móvil desarrollada en React Native para visualizar y gestionar información sobre los personajes del videojuego Wuthering Waves.
 
